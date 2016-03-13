@@ -1,0 +1,11 @@
+# Site settings
+title: Birgelen
+#email: your-email@domain.com
+description: > # this means to ignore newlines until "baseurl:"
+  Infoseiten für Birgelen
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://www.birgelen.de" # the base hostname & protocol for your site www.birgelen.de
+twitter_username: birgelen
+
+# Build settings
+markdown: kramdown

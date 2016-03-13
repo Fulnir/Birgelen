@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Birgelen</title>
+    <description>Infoseiten für Birgelen
+</description>
+    <link>http://www.birgelen.de/</link>
+    <atom:link href="http://www.birgelen.de/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sat, 12 Mar 2016 20:05:56 +0100</pubDate>
+    <lastBuildDate>Sat, 12 Mar 2016 20:05:56 +0100</lastBuildDate>
+    <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Willkommen Jekyll!</title>
+        <description>&lt;p&gt;Da ich heute eine neue Adresse (&lt;a href=&quot;http://dorffreunde-birgelen.de&quot;&gt;Dorffreunde Birgelen e.V.&lt;/a&gt;) eintragen durfte, habe ich bei der Gelegenheit
+das System auf “Jekyll” umgestellt. Das macht die Wartung und Ergänzung neuer Inhalte für mich etwas einfacher.&lt;/p&gt;
+
+</description>
+        <pubDate>Sat, 12 Mar 2016 18:59:53 +0100</pubDate>
+        <link>http://www.birgelen.de/update/2016/03/12/welcome-to-jekyll.html</link>
+        <guid isPermaLink="true">http://www.birgelen.de/update/2016/03/12/welcome-to-jekyll.html</guid>
+        
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>Dorffreunde Birgelen</title>
+        <description>&lt;p&gt;Heute durfte ich eine neue Vereinsadresse (&lt;a href=&quot;http://dorffreunde-birgelen.de&quot;&gt;Dorffreunde Birgelen e.V.&lt;/a&gt;) eintragen.&lt;/p&gt;
+
+&lt;p&gt;Der Verein Dorffreunde Birgelen e.V. wurde 2015 gegründet. &lt;/p&gt;
+
+&lt;p&gt;Der Verein befasst sich mit Ideen und Planungen die dem Ort Birgelen zu Gute kommen.&lt;/p&gt;
+</description>
+        <pubDate>Sat, 12 Mar 2016 17:59:53 +0100</pubDate>
+        <link>http://www.birgelen.de/vereine/2016/03/12/dorffreunde-birgelen-neu.html</link>
+        <guid isPermaLink="true">http://www.birgelen.de/vereine/2016/03/12/dorffreunde-birgelen-neu.html</guid>
+        
+        
+        <category>vereine</category>
+        
+      </item>
+    
+  </channel>
+</rss>
