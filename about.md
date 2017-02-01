@@ -145,7 +145,8 @@ Erfüllung der gesetzlichen Aufgaben der Verfassungsschutzbehörden oder des Mil
  der Rechte am geistigen Eigentum erforderlich ist.</p><p><strong>Auskunftsrecht</strong><br />Sie haben das jederzeitige 
  Recht, sich unentgeltlich und unverzüglich über die zu Ihrer Person erhobenen Daten zu erkundigen. Sie haben das 
  jederzeitige Recht, Ihre Zustimmung zur Verwendung Ihrer angegeben persönlichen Daten mit Wirkung für die Zukunft zu 
- widerrufen. Zur Auskunftserteilung wenden Sie sich bitte an den Anbieter unter den Kontaktdaten im Impressum.
+ widerrufen. Zur Auskunftserteilung wenden Sie sich bitte an den Anbieter unter den Kontaktdaten im Impressum<a href="http://www.codex-vinum.com">.</a>
+ 
    
  
   <center>Copyright © 2016 Edwin B&uuml;hler<center>
