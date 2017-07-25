@@ -10,28 +10,31 @@ Importieren mit:
 
 -}
 
-import Material
+import Bootstrap.Navbar as Navbar
+import Bootstrap.Modal as Modal
+import Navigation exposing (Location)
 -- Components
 import Msgs exposing (Msg)
 
 
+type Page
+    = Home
+    | GettingStarted
+    | Modules
+    | Addresses
+    | About
+    | NotFound
+
 ---- MODEL ----
 
-
 type alias Model =
-    { mdl :
-        Material.Model
-    , selectedTab : Int
+    { page : Page
+    , navState : Navbar.State
+    , modalState : Modal.State
     }
 
 
-model : Model
-model =
-    { mdl =
-        Material.model
-    , selectedTab = 0
-    }
 
-init : ( Model, Cmd Msg )
-init =
-    ( model, Cmd.none )
+
+
+

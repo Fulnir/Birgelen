@@ -11,9 +11,11 @@ Importieren mit:
 
 -}
 
-
-import Material
+import Navigation exposing (Location)
+import Bootstrap.Navbar as Navbar
+import Bootstrap.Modal as Modal
 
 type Msg
-    = Mdl (Material.Msg Msg)
-    | SelectTab Int
+    = UrlChange Location
+    | NavMsg Navbar.State
+    | ModalMsg Modal.State
