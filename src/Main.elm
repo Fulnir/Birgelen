@@ -34,6 +34,7 @@ import Bootstrap.Modal as Modal
 
 
 -- Components
+import Components.Start exposing (..)
 import Components.About exposing (..)
 import Components.Addresses exposing (..)
 import Msgs exposing (Msg)
@@ -68,9 +69,7 @@ menu model =
             , text " Birgelen"
             ]
         |> Navbar.items
-            [ Navbar.itemLink [ href "#getting-started" ] [ text "Getting Started" ]
-            , Navbar.itemLink [ href "#modules" ] [ text "Module" ]
-            , Navbar.itemLink [ href "#addresses" ] [ text "Adressen" ]
+            [ Navbar.itemLink [ href "#addresses" ] [ text "Adressen" ]
             , Navbar.itemLink [ href "#about" ] [ text "Über" ]
             ]
         |> Navbar.view model.navState
@@ -83,12 +82,6 @@ mainContent model =
             Models.Home ->
                 pageHome model
 
-            Models.GettingStarted ->
-                pageGettingStarted model
-
-            Models.Modules ->
-                pageModules model
-
             Models.Addresses ->
                 pageAddresses model
             
@@ -97,62 +90,6 @@ mainContent model =
 
             Models.NotFound ->
                 pageNotFound
-
-
-pageHome : Model -> List (Html Msg)
-pageHome model =
-    [ h1 [] [ text "Home" ]
-    , Grid.row []
-        [ Grid.col []
-            [ Card.config [ Card.outlinePrimary ]
-                |> Card.headerH4 [] [ text "Getting started" ]
-                |> Card.block []
-                    [ Card.text [] [ text "Getting started is real easy. Just click the start button." ]
-                    , Card.custom <|
-                        Button.linkButton
-                            [ Button.primary, Button.attrs [ href "#getting-started" ] ]
-                            [ text "Start" ]
-                    ]
-                |> Card.view
-            ]
-        , Grid.col []
-            [ Card.config [ Card.outlineDanger ]
-                |> Card.headerH4 [] [ text "Modules" ]
-                |> Card.block []
-                    [ Card.text [] [ text "Check out the modules overview" ]
-                    , Card.custom <|
-                        Button.linkButton
-                            [ Button.primary, Button.attrs [ href "#modules" ] ]
-                            [ text "Module" ]
-                    ]
-                |> Card.view
-            ]
-        ]
-    ]
-
-
-pageGettingStarted : Model -> List (Html Msg)
-pageGettingStarted model =
-    [ h2 [] [ text "Getting started" ]
-    , Button.button
-        [ Button.success
-        , Button.large
-        , Button.block
-        , Button.attrs [ onClick <| Msgs.ModalMsg Modal.visibleState ]
-        ]
-        [ text "Click me" ]
-    ]
-
-
-pageModules : Model -> List (Html Msg)
-pageModules model =
-    [ h1 [] [ text "Modules" ]
-    , Listgroup.ul
-        [ Listgroup.li [] [ text "Alert" ]
-        , Listgroup.li [] [ text "Badge" ]
-        , Listgroup.li [] [ text "Card" ]
-        ]
-    ]
 
 
 pageNotFound : List (Html Msg)

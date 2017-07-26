@@ -1,8 +1,6 @@
 module Components.About exposing (..)
 
 
-
-import Bootstrap.Button as Button
 import Bootstrap.Card as Card
 import Bootstrap.Grid as Grid
 import Html exposing (..)
@@ -15,31 +13,33 @@ import Msgs exposing (Msg)
 
 pageAbout : Model -> List (Html Msg)
 pageAbout model =
-    [ h1 [] [ text "Über diese Seite" ]
+    [ br [] []
+    , br [] []
+    ,h1 [] [ text "Über diese Seite" ]
     , Grid.row []
         [ Grid.col []
             [ Card.config [ Card.outlinePrimary ]
                 |> Card.headerH4 [] [ text "Impressum" ]
                 |> Card.block []
                     [ Card.text [ style [ ( "text-align", "left" ) ] ]
-                        [ i [ class "fa fa-envelope fa-2x", attribute "aria-hidden" "true" ] []
-                        , text "Adresse"
+                        [ div [ class "address-icon" ] [ i [ class "fa fa-envelope fa-2x", attribute "aria-hidden" "true" ] [] ] 
+                        , div [ class "address-text" ] [ text "Adresse" ] 
                         , br [] []
                         , br [] []
-                        , i [ class "fa fa-male", attribute "aria-hidden" "true" ] []
-                        , text "Edwin Bühler"
+                        , div [ class "address-icon" ] [ i [ class "fa fa-male", attribute "aria-hidden" "true" ] [] ] 
+                        , div [ class "address-text" ] [text "Edwin Bühler"]
                         , br [] []
-                        , i [ class "fa fa-envelope-o", attribute "aria-hidden" "true" ] []
-                        , img [ src "epost.png", style [ ( "height", "18px" ) ] ] []
+                        , div [ class "address-icon" ] [ i [ class "fa fa-envelope-o", attribute "aria-hidden" "true" ] [] ]
+                        , div [ class "address-text" ] [img [ src "epost.png", style [ ( "height", "18px" ) ] ] []]
                         , br [] []
-                        , i [ class "fa fa-home", attribute "aria-hidden" "true" ] []
-                        , text "Op de Berg 27"
+                        , div [ class "address-icon" ] [ i [ class "fa fa-home", attribute "aria-hidden" "true" ] [] ]
+                        , div [ class "address-text" ] [text "Op de Berg 27"]
                         , br [] []
-                        , i [ class "fa fa-map-marker", attribute "aria-hidden" "true" ] []
-                        , text "41849 Wassenberg"
+                        , div [ class "address-icon" ] [ i [ class "fa fa-map-marker", attribute "aria-hidden" "true" ] [] ]
+                        , div [ class "address-text" ] [text "41849 Wassenberg"]
                         , br [] []
-                        , i [ class "fa fa-globe", attribute "aria-hidden" "true" ] []
-                        , text "Deutschland"
+                        , div [ class "address-icon" ] [ i [ class "fa fa-globe", attribute "aria-hidden" "true" ] [] ]
+                        , div [ class "address-text" ] [text "Deutschland"]
                         , br [] []
                         ]
                     , Card.custom <|
@@ -48,7 +48,10 @@ pageAbout model =
                 |> Card.view
             ]
         ]
-    
+    , br [] []
+    , br [] []
+    ,text "Erstellt mit Elm "
+    , img [ src "elm-logo.png", style [ ( "height", "18px" ) ] ] []
     ]
 
 markdown : Html msg
