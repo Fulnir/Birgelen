@@ -86,9 +86,6 @@ mainContent model =
             Models.GettingStarted ->
                 pageGettingStarted model
 
-            Models.Modules ->
-                pageModules model
-
             Models.Addresses ->
                 pageAddresses model
             
@@ -142,18 +139,6 @@ pageGettingStarted model =
         ]
         [ text "Click me" ]
     ]
-
-
-pageModules : Model -> List (Html Msg)
-pageModules model =
-    [ h1 [] [ text "Modules" ]
-    , Listgroup.ul
-        [ Listgroup.li [] [ text "Alert" ]
-        , Listgroup.li [] [ text "Badge" ]
-        , Listgroup.li [] [ text "Card" ]
-        ]
-    ]
-
 
 pageNotFound : List (Html Msg)
 pageNotFound =

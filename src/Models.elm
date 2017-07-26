@@ -20,7 +20,6 @@ import Msgs exposing (Msg)
 type Page
     = Home
     | GettingStarted
-    | Modules
     | Addresses
     | About
     | NotFound

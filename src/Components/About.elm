@@ -15,7 +15,9 @@ import Msgs exposing (Msg)
 
 pageAbout : Model -> List (Html Msg)
 pageAbout model =
-    [ h1 [] [ text "Über diese Seite" ]
+    [ br [] []
+    , br [] []
+    ,h1 [] [ text "Über diese Seite" ]
     , Grid.row []
         [ Grid.col []
             [ Card.config [ Card.outlinePrimary ]
