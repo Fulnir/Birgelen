@@ -57,7 +57,16 @@ menu model =
     Navbar.config Msgs.NavMsg
         |> Navbar.withAnimation
         |> Navbar.container
-        |> Navbar.brand [ href "#" ] [ text "Birgelen" ]
+        |> Navbar.brand 
+            [ href "#" ]
+            [ img
+                [ src "logo.png"
+                --, class "d-inline-block align-top"
+                , style [ ( "height", "32px" ) , ( "margin-top", "10px" ) ]
+                ]
+                []
+            , text " Birgelen"
+            ]
         |> Navbar.items
             [ Navbar.itemLink [ href "#getting-started" ] [ text "Getting Started" ]
             , Navbar.itemLink [ href "#modules" ] [ text "Module" ]
