@@ -19,7 +19,6 @@ import Msgs exposing (Msg)
 
 type Page
     = Home
-    | GettingStarted
     | Addresses
     | About
     | NotFound

@@ -27,7 +27,6 @@ routeParser : UrlParser.Parser (Page -> a) a
 routeParser =
     UrlParser.oneOf
         [ UrlParser.map Models.Home UrlParser.top
-        , UrlParser.map Models.GettingStarted (UrlParser.s "getting-started")
         , UrlParser.map Models.Addresses (UrlParser.s "addresses")
         , UrlParser.map Models.About (UrlParser.s "about")
         ]
