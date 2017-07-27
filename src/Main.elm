@@ -91,11 +91,11 @@ mainContent model =
             Models.NotFound ->
                 pageNotFound
 
-
+-- TODO: Diese Seite gestalten.
 pageNotFound : List (Html Msg)
 pageNotFound =
     [ h1 [] [ text "Not found" ]
-    , text "SOrry couldn't find that page"
+    , text "Sorry couldn't find that page"
     ]
 
 
