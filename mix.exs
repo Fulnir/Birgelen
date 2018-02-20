@@ -9,7 +9,19 @@ defmodule BirgelenApp.Mixfile do
       elixirc_paths: elixirc_paths(Mix.env),
       compilers: [:phoenix, :gettext] ++ Mix.compilers,
       start_permanent: Mix.env == :prod,
-      deps: deps()
+      package: package(),
+      description: description(),
+      test_coverage: [tool: ExCoveralls],
+      preferred_cli_env: [
+        coveralls: :test,
+        "coveralls.detail": :test,
+        "coveralls.post": :test,
+        "coveralls.html": :test,
+        "coveralls.json": :test
+      ],
+      deps: deps(),
+      # Docs
+      docs: docs()
     ]
   end
 
@@ -37,7 +49,47 @@ defmodule BirgelenApp.Mixfile do
       {:phoenix_html, "~> 2.10"},
       {:phoenix_live_reload, "~> 1.0", only: :dev},
       {:gettext, "~> 0.11"},
+      {:credo, "~> 0.9.0-rc1", only: [:dev, :test]},
+      {:ex_doc, "~> 0.17", only: :dev, runtime: false},
+      {:inch_ex, "~> 0.5", only: [:dev, :test]},
+      {:excoveralls, "~> 0.7.2", only: :test},
+      {:ex_unit_notifier, "~> 0.1", only: :test},
+      {:mix_test_watch, "~> 0.2", only: :dev, runtime: false},
+      {:bunt, "~> 0.2.0"},
       {:cowboy, "~> 1.0"}
     ]
   end
+
+  defp description do
+    """
+    Die Webseite von Birgelen.
+    """
+  end
+
+  defp package do
+    # These are the default files included in the package
+    [
+      name: :dgraph_ex,
+      files: ["lib", "mix.exs", "README*", "LICENSE*"],
+      maintainers: ["Edwin Bühler"],
+      licenses: ["MIT"],
+      links: %{"GitHub" => "https://github.com/Fulnir/birgelen"}
+    ]
+  end
+
+  defp docs do
+    [
+      name: "Birgelen",
+      main: "README",
+      formatters: ["html"],
+      logo: "logo.png",
+      source_url: "https://github.com/Fulnir/birgelen",
+      homepage_url: "https://github.com/Fulnir/birgelen",
+      extras: [
+        "README.md"
+        # ,"guides/overview.md"
+      ]
+    ]
+  end
+
 end

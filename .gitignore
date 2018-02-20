@@ -1,6 +1,7 @@
 # Distribution
 build/
 _build/
+deps
 
 # elm-package generated files
 elm-stuff
