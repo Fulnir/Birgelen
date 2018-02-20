@@ -31,7 +31,9 @@ defmodule BirgelenApp.Mixfile do
   def application do
     [
       mod: {BirgelenApp.Application, []},
-      extra_applications: [:logger, :runtime_tools]
+      extra_applications: [:logger, :runtime_tools, 
+        # Add edeliver to the END of the list
+        :edeliver]
     ]
   end
 
@@ -56,7 +58,9 @@ defmodule BirgelenApp.Mixfile do
       {:ex_unit_notifier, "~> 0.1", only: :test},
       {:mix_test_watch, "~> 0.2", only: :dev, runtime: false},
       {:bunt, "~> 0.2.0"},
-      {:cowboy, "~> 1.0"}
+      {:cowboy, "~> 1.0"},
+      {:distillery, "~> 1.5"},
+      {:edeliver, "~> 1.4"}
     ]
   end
 

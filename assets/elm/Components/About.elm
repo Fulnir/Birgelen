@@ -52,7 +52,7 @@ pageAbout model =
     , br [] []
     ,text "Erstellt mit Elm "
     , img [ src "images/elm-logo.png", style [ ( "height", "18px" ) ] ] []
-    ,text " und Phoenix "
+    ,text " und "
     , img [ src "images/phoenix.png", style [ ( "height", "18px" ) ] ] []
     ]
 
