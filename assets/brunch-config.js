@@ -6,7 +6,7 @@ exports.config = {
   },
   conventions: { assets: /^(static)/ },
   paths: {
-    watched: ["static", "css", "js", "vendor", "elm"],
+    watched: ["static", "css", "js", "vendor", "elm", "elm/Components"],
     public: "../priv/static"
   },
   plugins: {
