@@ -1,5 +1,6 @@
 # Distribution
 build/
+_build/
 
 # elm-package generated files
 elm-stuff
@@ -12,3 +13,7 @@ node_modules
 
 # Desktop Services Store on macOS
 .DS_Store
+
+# Elm
+/assets/elm-stuff
+/assets/js/main.js
