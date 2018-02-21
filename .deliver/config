@@ -14,9 +14,9 @@ GIT_CLEAN_PATHS="_build rel priv/static"
 
 USING_DISTILLERY="true"
 
-# STAGING_HOSTS="85.214.128.188"  # staging / test hosts separated by space
-# STAGING_USER="deploy" # local user at staging hosts
-# TEST_AT="/home/deploy/staging" # deploy directory on staging hosts. default is DELIVER_TO
+STAGING_HOSTS="85.214.128.188"  # staging / test hosts separated by space
+STAGING_USER="edwin" # local user at staging hosts
+TEST_AT="/home/edwin/deploy/staging/$APP" # deploy directory on staging hosts. default is DELIVER_TO
 
 PRODUCTION_HOSTS="85.214.128.188" # deploy / production hosts separated by space
 PRODUCTION_USER="edwin" # local user at deploy hosts

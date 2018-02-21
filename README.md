@@ -10,9 +10,6 @@ To initialize Distillery, just run
 ```mix release.init```
 dann
 
-```bash
-mix release --verbose
-```
 
 
 ### edeliver
@@ -31,6 +28,11 @@ export PATH="$PATH:/usr/bin/elixir/bin"
 
 ```bash
 mix edeliver build release
+```
+
+
+```bash
+mix edeliver deploy release
 ```
 
 
