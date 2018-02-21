@@ -16,6 +16,8 @@ use Mix.Config
 config :birgelen_app, BirgelenAppWeb.Endpoint,
   load_from_system_env: true,
   url: [host: "85.214.128.188", port: 8888],
+  server: true,
+  version: Mix.Project.config[:version],
   cache_static_manifest: "priv/static/cache_manifest.json"
 
 # Do not print debug messages in production
@@ -56,7 +58,7 @@ config :logger, level: :info
 # Alternatively, you can configure exactly which server to
 # start per endpoint:
 #
-config :birgelen_app, BirgelenAppWeb.Endpoint, server: true
+# config :birgelen_app, BirgelenAppWeb.Endpoint, server: true
 #
 
 # Finally import the config/prod.secret.exs
