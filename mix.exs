@@ -59,14 +59,14 @@ defmodule BirgelenApp.Mixfile do
       {:mix_test_watch, "~> 0.2", only: :dev, runtime: false},
       {:bunt, "~> 0.2.0"},
       {:cowboy, "~> 1.0"},
-      {:distillery, "~> 1.5"},
+      {:distillery, "~> 1.5", warn_missing: false},
       {:edeliver, "~> 1.4"}
     ]
   end
 
   defp description do
     """
-    Die Webseite von Birgelen.
+    Experimental: Die Webseite von Birgelen.
     """
   end
 
