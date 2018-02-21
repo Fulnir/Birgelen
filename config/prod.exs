@@ -15,7 +15,7 @@ use Mix.Config
 # which you typically run after static files are built.
 config :birgelen_app, BirgelenAppWeb.Endpoint,
   load_from_system_env: true,
-  url: [host: "85.214.128.188", port: 8888],
+  url: [host: "85.214.128.188", port: {:system, "BIRGELEN_PORT"}],
   server: true,
   version: Mix.Project.config[:version],
   cache_static_manifest: "priv/static/cache_manifest.json"

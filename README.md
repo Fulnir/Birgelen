@@ -24,7 +24,7 @@ export PATH="$PATH:/usr/local/elixir/bin"
 #geändert zu
 export PATH="$PATH:/usr/bin/elixir/bin"
 ```
-
+export BIRGELEN_PORT=8888
 
 ```bash
 mix edeliver build release
@@ -42,7 +42,8 @@ mix edeliver deploy release to production
 mix edeliver start production
 ```
 
-
+mix edeliver ping production
+mix edeliver restart production
 
 evtl. ??
 nano ~\.profile
