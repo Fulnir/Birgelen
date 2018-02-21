@@ -6,7 +6,14 @@
 
 ### distillery
 
-release.init
+To initialize Distillery, just run 
+```mix release.init```
+dann
+
+```bash
+mix release --verbose
+```
+
 
 ### edeliver
 
@@ -28,7 +35,7 @@ mix edeliver build release
 
 
 
-
+evtl. ??
 nano ~\.profile
 hinzugefügt
 export PATH="$PATH:/usr/bin/elixir/bin"
