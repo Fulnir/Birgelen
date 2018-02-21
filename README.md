@@ -24,6 +24,9 @@ export PATH="$PATH:/usr/local/elixir/bin"
 #geändert zu
 export PATH="$PATH:/usr/bin/elixir/bin"
 ```
+
+env pvar PORT setzten
+
 export BIRGELEN_PORT=8888
 
 ```bash

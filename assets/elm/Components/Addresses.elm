@@ -89,7 +89,7 @@ addresses =
       , url = "http://www.birgelen.de"
       , contact = "Edwin Bühler"
       , address = ""
-      , email = "edwin(bei)birgelen.de"
+      , email = "fulnir(bei)gmail.com"
       , logo = "birgelen.png"
       , description = "Birgelen im Netz"
       }
