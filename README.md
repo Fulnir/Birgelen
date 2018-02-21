@@ -30,9 +30,16 @@ export PATH="$PATH:/usr/bin/elixir/bin"
 mix edeliver build release
 ```
 
-
+Zum testen Release to Staging.
 ```bash
 mix edeliver deploy release
+```
+
+Build a release and deploy it to your production hosts:
+```bash
+mix edeliver build release --branch=master
+mix edeliver deploy release to production
+mix edeliver start production
 ```
 
 

@@ -20,7 +20,7 @@ TEST_AT="/home/edwin/deploy/staging/$APP" # deploy directory on staging hosts. d
 
 PRODUCTION_HOSTS="85.214.128.188" # deploy / production hosts separated by space
 PRODUCTION_USER="edwin" # local user at deploy hosts
-DELIVER_TO="/home/edwin/deploy/$APP" # deploy directory on production hosts
+DELIVER_TO="/home/edwin/deploy/production/$APP" # deploy directory on production hosts
 
 # For *Phoenix* projects, symlink prod.secret.exs to our tmp source
 pre_erlang_get_and_update_deps() {
