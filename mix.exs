@@ -4,8 +4,8 @@ defmodule BirgelenApp.Mixfile do
   def project do
     [
       app: :birgelen_app,
-      version: "0.0.1",
-      elixir: "~> 1.4",
+      version: "0.0.2",
+      elixir: "~> 1.6",
       elixirc_paths: elixirc_paths(Mix.env),
       compilers: [:phoenix, :gettext] ++ Mix.compilers,
       start_permanent: Mix.env == :prod,
@@ -31,7 +31,8 @@ defmodule BirgelenApp.Mixfile do
   def application do
     [
       mod: {BirgelenApp.Application, []},
-      extra_applications: [:logger, :runtime_tools, 
+      extra_applications: [:logger, :runtime_tools,
+        :prometheus_ex, :prometheus_phoenix, :prometheus_plugs, :prometheus_process_collector,
         # Add edeliver to the END of the list
         :edeliver]
     ]
@@ -59,6 +60,10 @@ defmodule BirgelenApp.Mixfile do
       {:mix_test_watch, "~> 0.2", only: :dev, runtime: false},
       {:bunt, "~> 0.2.0"},
       {:cowboy, "~> 1.0"},
+      {:prometheus_ex, "~> 1.0"},
+      {:prometheus_phoenix, "~> 1.0"},
+      {:prometheus_plugs, "~> 1.0"},
+      {:prometheus_process_collector, "~> 1.0"},
       {:distillery, "~> 1.5", warn_missing: false},
       {:edeliver, "~> 1.4"}
     ]
@@ -73,7 +78,7 @@ defmodule BirgelenApp.Mixfile do
   defp package do
     # These are the default files included in the package
     [
-      name: :dgraph_ex,
+      name: :birgelen_app,
       files: ["lib", "mix.exs", "README*", "LICENSE*"],
       maintainers: ["Edwin Bühler"],
       licenses: ["MIT"],
