@@ -2,6 +2,9 @@
 
 APP="birgelen_app" # name of your release
 
+INCREMENT-VERSION=patch
+AUTO_VERSION=commit-count
+
 BUILD_HOST="85.214.128.188" # host where to build the release
 BUILD_USER="edwin" # local user at build host
 BUILD_AT="/home/edwin/tmp/edeliver/$APP/builds" # build directory on build host
@@ -30,4 +33,32 @@ pre_erlang_get_and_update_deps() {
       ln -sfn '$_prod_secret_path' '$BUILD_AT/config/prod.secret.exs'
     "
   fi
+}
+
+pre_erlang_clean_compile() {
+  status "Running phx.digest" # log output prepended with "----->"
+  __sync_remote " # runs the commands on the build host
+    # [ -f ~/.profile ] && source ~/.profile # load profile (optional)
+    source ~/.profile
+    # echo \$PATH # check if rbenv is in the path
+    set -e # fail if any command fails (recommended)
+    cd '$BUILD_AT' # enter the build directory on the build host (required)
+    # prepare something 
+    echo 'prepare something'
+    mkdir -p priv/static # required by the phx.digest task
+    cd '$BUILD_AT/assets'
+    node -v
+    echo 'npm install'
+    # If npm: command not found
+    # whereis node
+    # sudo ln -s /usr/bin/node-v7.3.0-linux-x64/bin/node /usr/bin/node
+    # sudo ln -s /usr/lib/node-v7.3.0-linux-x64/bin/node /usr/lib/node
+    # sudo ln -s /usr/bin/node-v7.3.0-linux-x64/bin/npm /usr/bin/npm
+    npm install
+    echo './node_modules/brunch/bin/brunch build --production'
+    ./node_modules/brunch/bin/brunch build --production 
+    cd '$BUILD_AT'
+    # run your custom task
+    APP='$APP' MIX_ENV='$TARGET_MIX_ENV' $MIX_CMD phx.digest $SILENCE
+  "
 }
