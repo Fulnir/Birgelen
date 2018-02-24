@@ -17,7 +17,7 @@ node_modules
 
 # Elm
 /assets/elm-stuff
-/assets/js/main.js
+#/assets/js/main.js
 
 # edeliver
 /config/prod.secret.exs
