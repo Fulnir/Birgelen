@@ -20398,7 +20398,7 @@ var _user$project$Components_About$pageAbout = function (model) {
 
 var _user$project$Components_Addresses$addresses = {
 	ctor: '::',
-	_0: {title: 'Birgelen', url: 'http://www.birgelen.de', contact: 'Edwin Bühler', address: '', email: 'edwin(bei)birgelen.de', logo: 'birgelen.png', description: 'Birgelen im Netz'},
+	_0: {title: 'Birgelen', url: 'http://www.birgelen.de', contact: 'Edwin Bühler', address: '', email: 'fulnir(bei)gmail.com', logo: 'birgelen.png', description: 'Birgelen im Netz'},
 	_1: {
 		ctor: '::',
 		_0: {title: 'Dorffreunde Birgelen e.V.', url: 'http://dorffreunde-birgelen.de/', logo: 'birgelen.png', contact: '', address: '', email: 'info@dorffreunde-birgelen.de', description: ''},

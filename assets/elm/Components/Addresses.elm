@@ -82,7 +82,6 @@ listEntry address =
         , div [ class "address-description" ] [ text address.description ]
         ]
 
-
 addresses : List { title : String, url : String, contact : String, address : String, email : String, description : String, logo : String }
 addresses =
     [ { title = "Birgelen"
