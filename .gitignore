@@ -22,3 +22,5 @@ node_modules
 # edeliver
 /config/prod.secret.exs
 .deliver/releases/
+/deps
+/.elixir_ls
