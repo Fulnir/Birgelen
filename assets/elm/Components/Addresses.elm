@@ -76,9 +76,9 @@ listEntry address =
             []
             -- Was wenn keine url vorhanden ?
         , if String.isEmpty address.url then (div [ class "address-title" ] [ text address.title ]) else div [ class "address-title" ] [ a [ href address.url ] [ text address.title ] ]
-        , div [ class "address-contact" ] [ text address.contact ]
-        , div [ class "address-address" ] [ text address.address ]
-        , div [ class "address-email" ] [ text address.email ]
+        , div [ class "address-contact" ] [ "" ] -- text address.contact
+        , div [ class "address-address" ] [ "" ] -- text address.address
+        , div [ class "address-email" ] [ "" ] -- text address.email
         , div [ class "address-description" ] [ text address.description ]
         ]
 
