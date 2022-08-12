@@ -1,26 +1,20 @@
-# Distribution
-build/
-_build/
-deps
+# build output
+dist/
+.output/
 
-# elm-package generated files
-elm-stuff
+# dependencies
+node_modules/
 
-# elm-repl generated files
-repl-temp-*
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
 
-# Dependency directories
-node_modules
 
-# Desktop Services Store on macOS
+# environment variables
+.env
+.env.production
+
+# macOS-specific files
 .DS_Store
-
-# Elm
-/assets/elm-stuff
-#/assets/js/main.js
-
-# edeliver
-/config/prod.secret.exs
-.deliver/releases/
-/deps
-/.elixir_ls
